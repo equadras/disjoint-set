@@ -4,11 +4,11 @@
 
 // Elemento de lista
 typedef struct ele {
-	void *info;
+	int *info;
 	struct ele *proximo;
 } Elemento;
 
-// Cabeçalho de lista
+// Cabeï¿½alho de lista
 typedef struct {
 	Elemento *cabeca;
 	int tamInfo, qtd;
@@ -27,5 +27,5 @@ int modifica_valor( Lista l, void *info , int pos );
 void mostra_lista( Lista l, void (*mostra)(void *) );
 void limpa_lista( Lista *l );
 
-int conta_elementos( Lista l ); // Função inútil na prática, pois temos o campo 'qtd'.
+int conta_elementos( Lista l ); // Funï¿½ï¿½o inï¿½til na prï¿½tica, pois temos o campo 'qtd'.
 
