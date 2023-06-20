@@ -34,9 +34,10 @@ int main() {
     }
 
     Lista* conjuntos = (Lista*)malloc(numVertices * sizeof(Lista));
+
     for (int i = 0; i < numVertices; i++) {
         int aux = i + 1;
-        criarConjunto(&conjuntos[i], &aux);
+        conjuntos[i] = criarConjunto(&aux);
     }
 
     for (int i = 0; i < numVertices; i++) {
@@ -44,8 +45,7 @@ int main() {
             if (matrizAdjacencia[i][j] == 1) {
                 int aux1 = i + 1;
                 int aux2 = j + 1;
-                printf("%d - %d\n", i, j);
-                unirConjuntos(conjuntos, numVertices, aux1, aux2);
+                unirConjuntos(conjuntos, numVertices, &aux1, &aux2);
             }
         }
     }
